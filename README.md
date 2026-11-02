@@ -11,6 +11,8 @@
 [![Remotion](https://img.shields.io/badge/Remotion-React%20Video-61DAFB.svg?style=flat-square)](https://remotion.dev)
 [![HyperFrames](https://img.shields.io/badge/HyperFrames-v0.8.223-ff8a3d.svg?style=flat-square)](https://github.com/heygen-com/hyperframes)
 [![VoiceStudio](https://img.shields.io/badge/VoiceStudio-Local%20TTS%20%26%20Clone-993f61.svg?style=flat-square)](https://voicestudio.sh/)
+[![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
+[![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
 
 [**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
 
@@ -133,14 +135,46 @@ curl -fsSL https://voicestudio.sh/install | sh
 
 ---
 
+## 👂 Ears for Coding Agents: Earshot & Real-Sound
+
+Integrated directly with [**Earshot**](https://github.com/Leonxlnx/earshot) (`Leonxlnx/earshot`), giving AI agents the ability to hear, analyze, time-align, and critique audio without hallucinating:
+
+* **Auditory Reasoning**: What a file sounds like in words (`earshot describe`), whether it matches a text prompt (`earshot match`), and whether it's pro-recorded or code-synthesized (`earshot realness`).
+* **Timeline Auditing**: Generates second-by-second listening transcripts aligned to video cuts (`earshot timeline --video input.mp4`).
+* **Sound Synthesis (`earshot sfx` / `earshot forge`)**: 252+ procedural sound effects rendered directly in Python code (whooshes, UI pops, riser hits, clicks).
+* **Skills Included**:
+  - `skills/earshot/`: Instructions for agentic auditory reasoning and verification.
+  - `skills/real-sound/`: Full production workflow for music editing, JSON sound design, license audits, and stem mastering.
+
+---
+
+## 🌐 Open Commons Media Search: Openverse
+
+Integrated with [**Openverse**](https://openverse.org) ([WordPress/openverse](https://github.com/WordPress/openverse)) to search and ingest over 800M+ CC-licensed (Creative Commons / Public Domain) assets:
+
+```bash
+# Search and download free audio & music
+python tools/openverse_search.py audio "acoustic guitar" --limit 5 --download raw_footage/audio/
+
+# Search and download free textures & stock images
+python tools/openverse_search.py images "vintage paper texture" --limit 5 --download reference/
+```
+
+* **Commercial & Modification Safe**: Automatically filters for CC0, PDM, and CC-BY compatible media.
+* **Resilient Engine**: Queries Openverse REST API with fallback to Wikimedia Commons.
+
+---
+
 ## 📂 Repository Structure
 
 ```
 ai-video-studio/
-├── skills/                          # 18 Specialized Video Production Agent Skills
+├── skills/                          # 20 Specialized Video Production & Audio Agent Skills
 │   ├── video-storyboard/            # Interactive visual storyboard & shot list generator
 │   ├── video-storyboard-stylesheet/ # Reference video analyzer & stylesheet compiler
 │   ├── lemo-opuscar/                # 66 code-rendered film styles engine
+│   ├── earshot/                     # Ears for coding agents (describe, match, critique sound)
+│   ├── real-sound/                  # Pro soundtrack engineering & licensed audio pipeline
 │   ├── motion-graphics/             # Remotion & GSAP motion graphics builder
 │   ├── motion-graphics-director/    # Creative direction & pacing rules
 │   ├── cinematic-camera/            # Camera moves, lens distortion, lighting
@@ -164,6 +198,7 @@ ai-video-studio/
 │   ├── documentary-style-guide.md   # Archival treatment, texture overlays
 │   └── motion-ui-style-library.md   # Motion taxonomy & easing standards
 ├── tools/                           # Automated Python & Shell CLI Tools
+│   ├── openverse_search.py          # Search & download 800M+ CC images, audio, & textures from Openverse
 │   ├── generate_interactive_storyboard.py # Generates self-contained interactive HTML decks
 │   ├── contact_sheet.py             # Generates 1 fps grids & filmstrip verification sheets
 │   ├── qa_check.py                  # Audits timeline safe zones, LUFS audio & compliance
