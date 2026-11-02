@@ -231,6 +231,8 @@ ai-video-studio/
 │   ├── storyboard_template.md       # Scene-by-scene storyboard specification
 │   ├── stylesheet_template.md       # Visual design system token specification
 │   └── animejs_motion_preset.js     # Reusable Anime.js motion presets (stagger, spring, SVG)
+├── examples/                        # Real-World Production Case Studies
+│   └── bairan_music_video/          # 2.5-min Surreal Multiplane Motion Collage (code, storyboard, stylesheet)
 ├── reference/                       # Style Catalogs & Research
 │   ├── STYLE_ATLAS.md               # Master reference index of 66 film styles & directing rules
 │   ├── PROMPT_MOTION_INDEX.md       # 236 Crazy AI Animation Prompts with video previews
