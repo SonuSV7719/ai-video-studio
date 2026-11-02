@@ -60,10 +60,10 @@ if (Get-Command node -ErrorAction SilentlyContinue) {
 
 # 3. Global Tools Installation
 if (-not $SkipNpm) {
-    Write-Host "`n⚡ Installing Global Programmatic Video Engines..." -ForegroundColor Yellow
-    Write-Host "  -> Installing hyperframes globally..."
-    npm install -g hyperframes --silent
-    Write-Host "  ✓ HyperFrames CLI installed" -ForegroundColor Green
+    Write-Host "`n⚡ Installing Global Programmatic Video & Motion Engines..." -ForegroundColor Yellow
+    Write-Host "  -> Installing hyperframes & animejs globally..."
+    npm install -g hyperframes animejs --silent
+    Write-Host "  ✓ HyperFrames & Anime.js installed" -ForegroundColor Green
 }
 
 # 4. Agent Skills Setup
