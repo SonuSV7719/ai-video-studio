@@ -109,6 +109,9 @@ Integrated directly with **Lemo-Opuscar** and **MG-Styles-15**, the studio provi
 
 *Full reference index available in [`reference/STYLE_ATLAS.md`](reference/STYLE_ATLAS.md).*
 
+### 🚀 Prompt Motion: 236 Crazy AI Animation Prompts
+Integrated catalog from [**Prompt Motion**](https://prompt-motion.com/) with 236 high-impact animation prompts, showreels, kinetic typography setups, and product UI animations. Browse the full index with video previews and prompt recipes in [`reference/PROMPT_MOTION_INDEX.md`](reference/PROMPT_MOTION_INDEX.md).
+
 ---
 
 ## 🎙️ Local AI Voice Cloning & Dubbing (VoiceStudio)
