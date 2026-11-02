@@ -137,18 +137,55 @@ curl -fsSL https://voicestudio.sh/install | sh
 
 ```
 ai-video-studio/
-├── skills/                          # Global AI Agent Skills
-│   ├── video-storyboard/            # Terminal-native & product video storyboard skill
-│   ├── video-storyboard-stylesheet/ # Reference video analysis & stylesheet generator
-│   └── lemo-opuscar/                # 66 code-rendered film styles skill
-├── tools/                           # Studio Automation Scripts
-│   ├── generate_interactive_storyboard.py # Interactive HTML storyboard generator
-│   └── ...
+├── skills/                          # 18 Specialized Video Production Agent Skills
+│   ├── video-storyboard/            # Interactive visual storyboard & shot list generator
+│   ├── video-storyboard-stylesheet/ # Reference video analyzer & stylesheet compiler
+│   ├── lemo-opuscar/                # 66 code-rendered film styles engine
+│   ├── motion-graphics/             # Remotion & GSAP motion graphics builder
+│   ├── motion-graphics-director/    # Creative direction & pacing rules
+│   ├── cinematic-camera/            # Camera moves, lens distortion, lighting
+│   ├── article-highlights/          # Kinetic highlighter & kinetic text animations
+│   ├── asset-finder/                # Autonomous asset harvesting & validation
+│   ├── audio-designer/              # SFX placement, ducking, broadcast mastering
+│   ├── edit-qa-validator/           # Timeline QC, frame slips, aspect-ratio audits
+│   ├── quality-check/               # Visual inspection & safe-margin tests
+│   ├── reel-editor/                 # High-velocity 9:16 Shorts/Reels assembly
+│   ├── short-form-retention/        # 3-second hook & retention curve optimization
+│   ├── terminal-inserts/            # Monospace CLI & code demo window rendering
+│   ├── video-motion-styles/         # Physics easings, springs, and velocity curves
+│   ├── vox-explainer/               # Vox-style documentary graphics & maps
+│   ├── youtube-editor/              # 16:9 narrative pacing & rhythm assembly
+│   └── youtube-long-form-essay/     # Deep-dive essay video orchestration
+├── styles/                          # Comprehensive Style Guides & Spec Sheets
+│   ├── film-styles/                 # 66 complete style specs (STYLE.md + style.json)
+│   ├── presets/                     # 8 platform presets (cinematic, shorts-reels, music-video...)
+│   ├── caption-styles.md            # 5 caption styles (Apple-Clean, Vox-Highlighter, Sticker-Pop...)
+│   ├── director-method.md           # Story structure & hook engineering
+│   ├── documentary-style-guide.md   # Archival treatment, texture overlays
+│   └── motion-ui-style-library.md   # Motion taxonomy & easing standards
+├── tools/                           # Automated Python & Shell CLI Tools
+│   ├── generate_interactive_storyboard.py # Generates self-contained interactive HTML decks
+│   ├── contact_sheet.py             # Generates 1 fps grids & filmstrip verification sheets
+│   ├── qa_check.py                  # Audits timeline safe zones, LUFS audio & compliance
+│   ├── index_audio.py               # EBU R128 loudness indexer & speech segmenter
+│   ├── render_pure_aroll.py         # 0% synthetic blur studio tone mapper (Mobius curve)
+│   ├── analyze_silence.py           # Detects speech pauses & dead air for jump-cuts
+│   ├── extract_word_timings.py      # Word-level timestamp extractor for kinetic subtitles
+│   ├── download_prompts.py          # Prompt Motion scraper & asset synchronizer
+│   └── install_voicestudio.ps1      # 1-click installer for VoiceStudio
+├── workflows/                       # Standard Operating Procedures & Runbooks
+│   ├── new-reel.md                  # Complete 9:16 vertical reel creation pipeline
+│   ├── new-youtube.md               # Complete 16:9 long-form video pipeline
+│   ├── fix-edit.md                  # Rapid iteration & revision workflow
+│   ├── index-audio.md               # Dialogue extraction & audio mastering workflow
+│   └── status.md                    # Health check & asset readiness monitor
 ├── templates/                       # Production Templates
 │   ├── storyboard_template.md       # Scene-by-scene storyboard specification
 │   └── stylesheet_template.md       # Visual design system token specification
 ├── reference/                       # Style Catalogs & Research
-│   └── STYLE_ATLAS.md               # Master reference index of styles & directing rules
+│   ├── STYLE_ATLAS.md               # Master reference index of 66 film styles & directing rules
+│   ├── PROMPT_MOTION_INDEX.md       # 236 Crazy AI Animation Prompts with video previews
+│   └── prompt_motion_cards.json     # Machine-readable metadata for prompt-motion catalog
 ├── setup.ps1                        # 1-command Windows setup script
 ├── setup.sh                         # 1-command Linux/macOS setup script
 ├── LICENSE                          # MIT License
