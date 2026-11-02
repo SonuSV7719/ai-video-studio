@@ -10,6 +10,7 @@
 [![Python: >=3.11](https://img.shields.io/badge/Python-%3E%3D3.11-3776AB.svg?style=flat-square&logo=python&logoColor=white)](https://python.org/)
 [![Remotion](https://img.shields.io/badge/Remotion-React%20Video-61DAFB.svg?style=flat-square)](https://remotion.dev)
 [![HyperFrames](https://img.shields.io/badge/HyperFrames-v0.8.223-ff8a3d.svg?style=flat-square)](https://github.com/heygen-com/hyperframes)
+[![Anime.js](https://img.shields.io/badge/Anime.js-Motion%20Engine-F64F59.svg?style=flat-square)](https://animejs.com/)
 [![VoiceStudio](https://img.shields.io/badge/VoiceStudio-Local%20TTS%20%26%20Clone-993f61.svg?style=flat-square)](https://voicestudio.sh/)
 [![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
 [![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
@@ -116,6 +117,18 @@ Integrated catalog from [**Prompt Motion**](https://prompt-motion.com/) with 236
 
 ---
 
+## ⚡ Kinetic Motion & Physics: Anime.js & GSAP
+
+AI Video Studio integrates [**Anime.js**](https://animejs.com/) (`juliangarnier/anime`) and **GSAP** for declarative, code-driven animation:
+
+* **SVG Path Drawing & Handwriting**: Smooth stroke reveals (`strokeDashoffset: [anime.setDashoffset, 0]`).
+* **Staggered Kinetic Typography**: Letter-by-letter and word-by-word reveals using `delay: anime.stagger(35)`.
+* **Physics & Springs**: Natural physical bounce curves using `easing: 'spring(1, 90, 14, 0)'`.
+* **Beating Heartbeat & Pulsing Loops**: Seamless rhythmic timelines mapped to musical beats.
+* **Recipes & Presets**: See [`skills/motion-graphics/references/animejs-recipes.md`](skills/motion-graphics/references/animejs-recipes.md) and [`templates/animejs_motion_preset.js`](templates/animejs_motion_preset.js).
+
+---
+
 ## 🎙️ Local AI Voice Cloning & Dubbing (VoiceStudio)
 
 For voice generation, voice cloning, and multi-language dubbing, AI Video Studio integrates with [**VoiceStudio**](https://voicestudio.sh/) (`debpalash/VoiceStudio`):
@@ -216,7 +229,8 @@ ai-video-studio/
 │   └── status.md                    # Health check & asset readiness monitor
 ├── templates/                       # Production Templates
 │   ├── storyboard_template.md       # Scene-by-scene storyboard specification
-│   └── stylesheet_template.md       # Visual design system token specification
+│   ├── stylesheet_template.md       # Visual design system token specification
+│   └── animejs_motion_preset.js     # Reusable Anime.js motion presets (stagger, spring, SVG)
 ├── reference/                       # Style Catalogs & Research
 │   ├── STYLE_ATLAS.md               # Master reference index of 66 film styles & directing rules
 │   ├── PROMPT_MOTION_INDEX.md       # 236 Crazy AI Animation Prompts with video previews

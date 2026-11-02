@@ -13,8 +13,8 @@ command -v yt-dlp >/dev/null 2>&1 || echo "⚠️  yt-dlp not found. Install via
 command -v node >/dev/null 2>&1 || { echo "✗ Node.js 20+ is required."; exit 1; }
 
 # 3. Global Engines
-echo "⚡ Installing HyperFrames..."
-npm install -g hyperframes --silent || true
+echo "⚡ Installing HyperFrames & Anime.js..."
+npm install -g hyperframes animejs --silent || true
 
 # 4. Agent Skills
 SKILLS_DIR="$HOME/.gemini/config/skills"
