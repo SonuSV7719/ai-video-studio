@@ -11,6 +11,10 @@ echo "✓ Created standard 3-folder architecture (raw_footage/, reference/, expo
 command -v ffmpeg >/dev/null 2>&1 || echo "⚠️  FFmpeg not found. Install via: brew install ffmpeg / sudo apt install ffmpeg"
 command -v yt-dlp >/dev/null 2>&1 || echo "⚠️  yt-dlp not found. Install via: pip install yt-dlp / brew install yt-dlp"
 command -v node >/dev/null 2>&1 || { echo "✗ Node.js 20+ is required."; exit 1; }
+command -v python3 >/dev/null 2>&1 && {
+    echo "✓ Python detected ($(python3 --version))"
+    [ -f "skills/video-effects/requirements.txt" ] && pip install -r skills/video-effects/requirements.txt --quiet || true
+}
 
 # 3. Global Engines
 echo "⚡ Installing HyperFrames & Anime.js..."

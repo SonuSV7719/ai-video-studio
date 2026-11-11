@@ -58,6 +58,19 @@ if (Get-Command node -ErrorAction SilentlyContinue) {
     Write-Error "  ✗ Node.js 20+ is required. Please install from https://nodejs.org/"
 }
 
+# Python check (for 51 Video Effects)
+if (Get-Command python -ErrorAction SilentlyContinue) {
+    $pyVer = python --version
+    Write-Host "  ✓ Python detected ($pyVer)" -ForegroundColor Green
+    if (Test-Path "skills\video-effects\requirements.txt") {
+        Write-Host "  -> Verifying Python requirements for video-effects (OpenCV, MediaPipe, Pillow)..."
+        pip install -r skills\video-effects\requirements.txt --quiet
+        Write-Host "  ✓ Video effects dependencies verified" -ForegroundColor Green
+    }
+} else {
+    Write-Warning "  ✗ Python 3.10+ is recommended for face tracking and video effects."
+}
+
 # 3. Global Tools Installation
 if (-not $SkipNpm) {
     Write-Host "`n⚡ Installing Global Programmatic Video & Motion Engines..." -ForegroundColor Yellow

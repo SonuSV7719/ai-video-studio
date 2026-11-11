@@ -14,8 +14,9 @@
 [![VoiceStudio](https://img.shields.io/badge/VoiceStudio-Local%20TTS%20%26%20Clone-993f61.svg?style=flat-square)](https://voicestudio.sh/)
 [![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
 [![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
+[![Video Effects](https://img.shields.io/badge/Video%20Effects-51%20Viral%20FX-E10098.svg?style=flat-square)](skills/video-effects)
 
-[**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
+[**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**51 Video Effects**](#-51-viral-video-effects-face-tracking--behind-the-head) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
 
 </div>
 
@@ -129,6 +130,36 @@ AI Video Studio integrates [**Anime.js**](https://animejs.com/) (`juliangarnier/
 
 ---
 
+## 🎭 51 Viral Video Effects (Face-Tracking & Behind-the-Head)
+
+Integrated directly from [**claude-video-effects**](https://github.com/Vibha-Ramprakash/claude-video-effects) by Vibha Ramprakash, AI Video Studio includes 51 viral talking-head effects optimized for 9:16 vertical reels and shorts:
+
+* **Face Tracking & Head Cutouts**: Uses local OpenCV YuNet face detection and MediaPipe Selfie Segmentation.
+* **Behind-the-Head Layering**: Elements (kinetic text, cards, widgets, graphs, sticker piles) sit *behind* the speaker’s head without obscuring their face.
+* **51 Built-in Effects**:
+  - `orbit`: Screenshots or reels circle the speaker's head in 3D (in front at the bottom, behind at the top).
+  - `locked-on`: Corner brackets lock onto the speaker's face with smooth dynamic camera tracking.
+  - `backdrop-word`: Giant kinetic typographic words drop behind the speaker.
+  - `spotlight`: Kills background ambient lighting while keeping the speaker illuminated with glowing text.
+  - `liquid-glass-graph`: Translucent blurred glass charts revealing revenue, metrics, or curves.
+  - `phone-fan` / `comment-box` / `apple-toggles`: Floating UI widgets, interactive toggles, and social comment bubbles.
+  - `huge-strike` / `crayon-write`: Kinetic handwritten annotations and strike-throughs.
+
+### Quick Usage:
+
+```bash
+# Run a single effect on a clip
+python skills/video-effects/scripts/fx.py orbit input.mp4 output.mp4 --start 3 --end 6 --text "AI VIDEO"
+
+# Check draft frames instantly before full render (generates quick PNG inspection)
+python skills/video-effects/scripts/fx.py --plan plan.json input.mp4 check.png --still 4.5
+
+# Full plan-based rendering with original audio preserved
+python skills/video-effects/scripts/fx.py --plan plan.json input.mp4 output.mp4
+```
+
+---
+
 ## 🎙️ Local AI Voice Cloning & Dubbing (VoiceStudio)
 
 For voice generation, voice cloning, and multi-language dubbing, AI Video Studio integrates with [**VoiceStudio**](https://voicestudio.sh/) (`debpalash/VoiceStudio`):
@@ -182,7 +213,8 @@ python tools/openverse_search.py images "vintage paper texture" --limit 5 --down
 
 ```
 ai-video-studio/
-├── skills/                          # 20 Specialized Video Production & Audio Agent Skills
+├── skills/                          # 21 Specialized Video Production & Audio Agent Skills
+│   ├── video-effects/               # 51 viral effects (face tracking, behind-the-head segmentation)
 │   ├── video-storyboard/            # Interactive visual storyboard & shot list generator
 │   ├── video-storyboard-stylesheet/ # Reference video analyzer & stylesheet compiler
 │   ├── lemo-opuscar/                # 66 code-rendered film styles engine
