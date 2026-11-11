@@ -13,6 +13,7 @@
 [![Anime.js](https://img.shields.io/badge/Anime.js-Motion%20Engine-F64F59.svg?style=flat-square)](https://animejs.com/)
 [![51 Video Effects](https://img.shields.io/badge/Video%20Effects-51%20Viral%20FX-E10098.svg?style=flat-square)](skills/video-effects)
 [![Master Director](https://img.shields.io/badge/Director-Master%20Video%20Director-6f42c1.svg?style=flat-square)](skills/video-director)
+[![Self-Verification](https://img.shields.io/badge/Verification-Autonomous%20Self--QA%20%26%20Auto--Fix-2ea44f.svg?style=flat-square)](skills/video-verification)
 [![VoiceStudio](https://img.shields.io/badge/VoiceStudio-Local%20TTS%20%26%20Clone-993f61.svg?style=flat-square)](https://voicestudio.sh/)
 [![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
 [![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
@@ -149,6 +150,35 @@ python tools/trend_benchmarker.py reference/competitor_reel.mp4 --out-dir refere
 * **Dominant Color Palette**: Top 5 HEX color swatches extracted from sampled keyframes.
 * **EBU R128 Audio Metrics**: Integrated LUFS, Loudness Range (LRA), and True Peak.
 * **Actionable Production Recipes**: Generates `style_benchmark.json` and a human-readable `benchmark_report.md` that feed directly into your project's `stylesheet.md` and `storyboard.md`.
+
+---
+
+## 🔍 Autonomous Self-Verification & Auto-Fix Loop (Zero Hardcoding)
+
+The **`video-verification`** skill ([`skills/video-verification/`](skills/video-verification)) enforces an autonomous self-healing quality assurance cycle. The AI agent **never assumes** its video is correct — it extracts visual frame sheets, evaluates quality against the project blueprints, and writes dynamic fix code on demand to repair defects before delivery:
+
+```mermaid
+flowchart TD
+    A["🎬 Render Master / Scene Clips"] --> B["📸 Dynamic Frame Extraction (Midpoints & Contact Sheets)"]
+    B --> C{"🔍 Multi-Domain Self-Audit"}
+    C -->|Check 1| D1["📐 Social Safe Margins (Top 180px / Bottom 370px)"]
+    C -->|Check 2| D2["👤 Face & Occlusion (Clean cutouts behind head)"]
+    C -->|Check 3| D3["🔤 Contrast & Readability (WCAG AAA legibility)"]
+    C -->|Check 4| D4["🔊 Audio EBU R128 (-14 LUFS, Peak <= -1.0 dBFS)"]
+    C -->|Check 5| D5["🎞️ Motion Continuity (Zero dropped/frozen frames)"]
+    D1 & D2 & D3 & D4 & D5 --> E{"Any Defect Detected?"}
+    E -->|Yes| F["🛠️ Dynamic Self-Healing (Generate custom fix code on the fly)"]
+    F --> A
+    E -->|No Defects| G["✅ 100% Verified Delivery with Contact Sheet Proof"]
+```
+
+### Why Zero Hardcoding?
+* Rigid, hardcoded regex and static templates fail across different genres, aspect ratios, and tempos.
+* The agent **reasons directly from the project's requirements**:
+  - For vertical reels: It dynamically crops the danger zones to ensure subtitles never collide with platform UI.
+  - For music videos: It dynamically checks that visual punch-ins land on musical transients.
+  - For behind-the-head effects: It checks segmentation feathering so text never bleeds over the speaker's eyes or hair.
+  - For audio: It dynamically applies an inter-sample peak limiter (`alimiter=limit=-1.0dB:level=false`) and speech normalizer (`dynaudnorm`).
 
 ---
 
@@ -300,8 +330,9 @@ python tools/generate_interactive_storyboard.py [output_path.html]
 
 ```
 ai-video-studio/
-├── skills/                          # 22 Specialized Video Production & Audio Agent Skills
+├── skills/                          # 23 Specialized Video Production & Audio Agent Skills
 │   ├── video-director/              # Master autonomous director (story, pacing, motion, audio, VFX)
+│   ├── video-verification/          # Autonomous self-QA, frame sheet inspection & dynamic auto-fix
 │   ├── video-effects/               # 51 viral effects (face tracking, behind-the-head segmentation)
 │   ├── video-storyboard/            # Interactive visual storyboard & shot list generator
 │   ├── video-storyboard-stylesheet/ # Reference video analyzer & stylesheet compiler
@@ -332,6 +363,7 @@ ai-video-studio/
 │   └── motion-ui-style-library.md   # Motion taxonomy & easing standards
 ├── tools/                           # Automated Python & Shell CLI Tools
 │   ├── trend_benchmarker.py         # Deconstructs viral Reels & Shorts (ASL, cuts, palettes, effects)
+│   ├── verify_output.py             # Autonomous self-QA inspector (EBU R128, freezes, margins, limiter fix)
 │   ├── openverse_search.py          # Search & download 800M+ CC images, audio, & textures from Openverse
 │   ├── generate_interactive_storyboard.py # Generates self-contained interactive HTML decks
 │   ├── contact_sheet.py             # Generates 1 fps grids & filmstrip verification sheets
