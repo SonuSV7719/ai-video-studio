@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Husn (Anuv Jain) — AI Kinetic Music Video Storyboard</title>
+  <style>
+    :root {
+      --bg: #0B0B0E;
+      --card-bg: #141318;
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #F7F5EE;
+      --muted: #9E9AA6;
+      --accent: #FF4A3D;
+      --gold: #F5A623;
+      --cyan: #00E5FF;
+      --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+      --font-sans: 'Inter', system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      padding: 32px 24px;
+      line-height: 1.5;
+    }
+    .header {
+      max-width: 1200px;
+      margin: 0 auto 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 24px;
+    }
+    .badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      background: rgba(255, 74, 61, 0.15);
+      color: var(--accent);
+      border: 1px solid rgba(255, 74, 61, 0.3);
+      margin-bottom: 12px;
+    }
+    h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 6px; }
+    .subtitle { color: var(--muted); font-size: 14px; }
+    .timeline {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto 28px;
+      gap: 4px;
+      height: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.05);
+    }
+    .tl-seg { flex: 1; transition: opacity 0.2s; }
+    .tl-seg:hover { filter: brightness(1.3); cursor: pointer; }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 74, 61, 0.4);
+    }
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .card-time {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--gold);
+    }
+    .card-badge {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .lyrics-box {
+      background: rgba(0,0,0,0.4);
+      border-left: 3px solid var(--accent);
+      padding: 10px 14px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .lyrics-text {
+      font-size: 15px;
+      font-style: italic;
+      color: #FFF;
+      font-weight: 500;
+    }
+    .meta-row {
+      font-size: 12px;
+      margin-bottom: 8px;
+      color: var(--muted);
+    }
+    .meta-label {
+      font-family: var(--font-mono);
+      color: var(--text);
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-right: 6px;
+    }
+    .swatches {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.03);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .dot { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="badge">🎬 Pre-Production Review Gate</div>
+    <h1>"Husn" (Anuv Jain) — AI Kinetic Music Video</h1>
+    <p class="subtitle">1080x1920 (9:16 Vertical Reel) • 30.0s • 24 FPS CFR • Zero-Timeline Multi-Layered Kinetic Collage</p>
+    
+    <div class="swatches">
+      <div class="swatch"><div class="dot" style="background:#0B0B0E"></div><span>Obsidian Night: #0B0B0E</span></div><div class="swatch"><div class="dot" style="background:#F7F5EE"></div><span>Warm Paper Milk: #F7F5EE</span></div><div class="swatch"><div class="dot" style="background:#FF4A3D"></div><span>Electric Coral: #FF4A3D</span></div><div class="swatch"><div class="dot" style="background:#F5A623"></div><span>Golden Amber: #F5A623</span></div><div class="swatch"><div class="dot" style="background:#00E5FF"></div><span>Cyan Ice: #00E5FF</span></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-seg" style="background:#FF4A3D" title="Scene 1: Acoustic Hook & Lock-On"></div><div class="tl-seg" style="background:#F5A623" title="Scene 2: Behind-The-Head Typographic Drop"></div><div class="tl-seg" style="background:#00E5FF" title="Scene 3: Paradox Split & Crayon Mark"></div><div class="tl-seg" style="background:#7FB069" title="Scene 4: Liquid Glass & Emotional Waveform"></div><div class="tl-seg" style="background:#FF3B30" title="Scene 5: The Chorus Climax — HUSN Explosion"></div><div class="tl-seg" style="background:#A371F7" title="Scene 6: Outro Loop & Infinite Orbit"></div>
+  </div>
+
+  <div class="grid">
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">0.0s – 4.5s (4.5s)</span>
+        <span class="card-badge" style="background:#FF4A3D22; color:#FF4A3D; border:1px solid #FF4A3D55;">0-3s Hook</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 1: Acoustic Hook & Lock-On</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Dekho dekho..."</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>spotlight + locked-on (face brackets)</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Acoustic fingerpicking starts, vocal lead enters at 1.2s</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>Obsidian dark background, warm golden top-light on singer silhouette, cyan face-tracking corner brackets snap on at 1.35x zoom</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">4.5s – 9.0s (4.5s)</span>
+        <span class="card-badge" style="background:#F5A62322; color:#F5A623; border:1px solid #F5A62355;">Behind-Head VFX</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 2: Behind-The-Head Typographic Drop</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Kaisi baatein yahan ki..."</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>backdrop-word</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Rhythmic palm-mute acoustic thump</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>Giant word 'BAATEIN' (220px Archivo Black) drops behind the singer's head; foreground singer stays crisp with MediaPipe cutout</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">9.0s – 14.0s (5.0s)</span>
+        <span class="card-badge" style="background:#00E5FF22; color:#00E5FF; border:1px solid #00E5FF55;">Split & Doodle</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 3: Paradox Split & Crayon Mark</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Hai saath par hain saath na bhi..."</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>broll-split + crayon-write</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Vocal yearning inflection, punch-in at 11.8s</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>Split frame with warm B-roll silhouette on top and singer below; hand-drawn red crayon circle sketches around the subject</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">14.0s – 19.5s (5.5s)</span>
+        <span class="card-badge" style="background:#7FB06922; color:#7FB069; border:1px solid #7FB06955;">Liquid Glass</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 4: Liquid Glass & Emotional Waveform</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Kya itni aasaan hai yeh be-rukhi..."</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>liquid-glass-graph + slow-push</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Melodic crescendo leading to chorus</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>Translucent frosted glass card floats under chin with animated audio waveform climbing in sync with vocal vibrato</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">19.5s – 25.0s (5.5s)</span>
+        <span class="card-badge" style="background:#FF3B3022; color:#FF3B30; border:1px solid #FF3B3055;">Climax Drop</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 5: The Chorus Climax — HUSN Explosion</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Husn tera tauba tauba..."</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>backdrop-word (giant HUSN) + lean-in (1.45x) + dot-reveal</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Chorus drop, vocal belt, full dynamic power</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>SHOWSTOPPER: Background turns fiery coral-red, giant glowing text 'HUSN' slams behind singer, floating ember particles drift upward</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-head">
+        <span class="card-time">25.0s – 30.0s (5.0s)</span>
+        <span class="card-badge" style="background:#A371F722; color:#A371F7; border:1px solid #A371F755;">Infinite Loop</span>
+      </div>
+      <h3 style="font-size:16px; margin-bottom:12px;">Scene 6: Outro Loop & Infinite Orbit</h3>
+      <div class="lyrics-box">
+        <div class="lyrics-text">"Husn tera tauba... [Acoustic Sustains]"</div>
+      </div>
+      <div class="meta-row"><span class="meta-label">VFX:</span><code>orbit (3D card carousel) + tap</code></div>
+      <div class="meta-row"><span class="meta-label">Audio:</span>Resonant guitar chord sustains, loops cleanly into Scene 1</div>
+      <div class="meta-row"><span class="meta-label">Visual:</span>Polaroid cards circle in 3D around singer's head; camera smoothly resets to Scene 1 wide composition for seamless loop</div>
+    </div>
+    
+  </div>
+</body>
+</html>
