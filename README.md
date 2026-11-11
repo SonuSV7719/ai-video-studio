@@ -15,8 +15,9 @@
 [![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
 [![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
 [![Video Effects](https://img.shields.io/badge/Video%20Effects-51%20Viral%20FX-E10098.svg?style=flat-square)](skills/video-effects)
+[![Master Director](https://img.shields.io/badge/Director-Master%20Video%20Director-6f42c1.svg?style=flat-square)](skills/video-director)
 
-[**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**51 Video Effects**](#-51-viral-video-effects-face-tracking--behind-the-head) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
+[**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**51 Video Effects**](#-51-viral-video-effects-face-tracking--behind-the-head) • [**Video Director**](#-video-director-master-autonomous-film--motion-director) • [**Trend Benchmarking**](#-trend-benchmarking-deconstruct-viral-reels--shorts) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
 
 </div>
 
@@ -192,6 +193,39 @@ Integrated directly with [**Earshot**](https://github.com/Leonxlnx/earshot) (`Le
 
 ---
 
+## 🎬 Video Director: Master Autonomous Film & Motion Director
+
+The **`video-director`** skill ([`skills/video-director/`](skills/video-director)) transforms coding agents into elite multidisciplinary directors by orchestrating all specialized studio tools based on the content archetype:
+
+* **Executive Storyteller**: 3-second hook engineering (pattern interrupts, visual paradoxes), retention curve pacing (novel stimulus every 1.5–2.5s), and infinite loop endings.
+* **Senior Video Editor**: Cutting on action, eye-trace matching, J/L cuts, zero-blur natural optical clarity, and broadcast speech leveling (`dynaudnorm`, constant -14 LUFS).
+* **Lead Motion Graphics Designer**: Anime.js physics springs (`spring(1, 90, 14, 0)`), staggered character typography (`delay: anime.stagger(35)`), SVG path drawing, and Remotion sequence layouts.
+* **VFX & Viral Elements Specialist**: 51 viral video effects (`skills/video-effects`), OpenCV YuNet face tracking, and MediaPipe selfie segmentation for behind-the-head text drops, dynamic corner tracking, and liquid glass charts.
+* **Master Sound Designer**: Earshot auditory critique and realness auditing, procedural SFX synthesis (`earshot sfx`), Openverse licensed music integration, and dynamic dialogue ducking (-18 dB).
+
+---
+
+## 📈 Trend Benchmarking: Deconstruct Viral Reels & Shorts
+
+Reverse-engineer the pacing, visual DNA, and editing mechanics of any viral Instagram Reel, YouTube Short, or TikTok with the studio's automated benchmarker:
+
+```bash
+# Deconstruct any public URL
+python tools/trend_benchmarker.py "https://www.youtube.com/shorts/EXAMPLE_ID" --out-dir reference/trending/viral_style
+
+# Or analyze a local video file
+python tools/trend_benchmarker.py reference/competitor_reel.mp4 --out-dir reference/trending/viral_style
+```
+
+### What It Deconstructs:
+* **Average Shot Length (ASL)**: Precise cut velocity and scene frequency.
+* **Hook Cut Velocity**: Exact number and timestamps of cuts within the first 3.0 seconds.
+* **Dominant Color Palette**: Top 5 HEX color swatches extracted from sampled keyframes.
+* **EBU R128 Audio Metrics**: Integrated LUFS, Loudness Range (LRA), and True Peak.
+* **Actionable Production Recipes**: Generates `style_benchmark.json` and a human-readable `benchmark_report.md` that feed directly into your project's `stylesheet.md` and `storyboard.md`.
+
+---
+
 ## 🌐 Open Commons Media Search: Openverse
 
 Integrated with [**Openverse**](https://openverse.org) ([WordPress/openverse](https://github.com/WordPress/openverse)) to search and ingest over 800M+ CC-licensed (Creative Commons / Public Domain) assets:
@@ -213,7 +247,8 @@ python tools/openverse_search.py images "vintage paper texture" --limit 5 --down
 
 ```
 ai-video-studio/
-├── skills/                          # 21 Specialized Video Production & Audio Agent Skills
+├── skills/                          # 22 Specialized Video Production & Audio Agent Skills
+│   ├── video-director/              # Master autonomous director (story, pacing, motion, audio, VFX)
 │   ├── video-effects/               # 51 viral effects (face tracking, behind-the-head segmentation)
 │   ├── video-storyboard/            # Interactive visual storyboard & shot list generator
 │   ├── video-storyboard-stylesheet/ # Reference video analyzer & stylesheet compiler
@@ -243,6 +278,7 @@ ai-video-studio/
 │   ├── documentary-style-guide.md   # Archival treatment, texture overlays
 │   └── motion-ui-style-library.md   # Motion taxonomy & easing standards
 ├── tools/                           # Automated Python & Shell CLI Tools
+│   ├── trend_benchmarker.py         # Deconstructs viral Reels & Shorts (ASL, cuts, palettes, effects)
 │   ├── openverse_search.py          # Search & download 800M+ CC images, audio, & textures from Openverse
 │   ├── generate_interactive_storyboard.py # Generates self-contained interactive HTML decks
 │   ├── contact_sheet.py             # Generates 1 fps grids & filmstrip verification sheets
