@@ -2,22 +2,22 @@
 
 # 🎬 AI Video Studio
 
-**The Programmatic, Agentic Video Production Engine & Style System**  
-*Code-driven motion graphics, terminal-native product demos, cinematic reels, and broadcast audio mastering — 100% local, reproducible, and review-gated.*
+**The Programmatic, Agentic Video Production Engine & Autonomous Showrunner**  
+*Code-driven motion graphics, terminal-native product demos, viral short-form reels, and broadcast audio mastering — 100% local, reproducible, and review-gated.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![Node: >=20](https://img.shields.io/badge/Node.js-%3E%3D20-green.svg?style=flat-square)](https://nodejs.org/)
-[![Python: >=3.11](https://img.shields.io/badge/Python-%3E%3D3.11-3776AB.svg?style=flat-square&logo=python&logoColor=white)](https://python.org/)
+[![Python: >=3.10](https://img.shields.io/badge/Python-%3E%3D3.10-3776AB.svg?style=flat-square&logo=python&logoColor=white)](https://python.org/)
 [![Remotion](https://img.shields.io/badge/Remotion-React%20Video-61DAFB.svg?style=flat-square)](https://remotion.dev)
 [![HyperFrames](https://img.shields.io/badge/HyperFrames-v0.8.223-ff8a3d.svg?style=flat-square)](https://github.com/heygen-com/hyperframes)
 [![Anime.js](https://img.shields.io/badge/Anime.js-Motion%20Engine-F64F59.svg?style=flat-square)](https://animejs.com/)
+[![51 Video Effects](https://img.shields.io/badge/Video%20Effects-51%20Viral%20FX-E10098.svg?style=flat-square)](skills/video-effects)
+[![Master Director](https://img.shields.io/badge/Director-Master%20Video%20Director-6f42c1.svg?style=flat-square)](skills/video-director)
 [![VoiceStudio](https://img.shields.io/badge/VoiceStudio-Local%20TTS%20%26%20Clone-993f61.svg?style=flat-square)](https://voicestudio.sh/)
 [![Earshot](https://img.shields.io/badge/Earshot-AI%20Audio%20Ears-8A2BE2.svg?style=flat-square)](https://github.com/Leonxlnx/earshot)
 [![Openverse](https://img.shields.io/badge/Openverse-800M%2B%20CC%20Media-006699.svg?style=flat-square)](https://openverse.org)
-[![Video Effects](https://img.shields.io/badge/Video%20Effects-51%20Viral%20FX-E10098.svg?style=flat-square)](skills/video-effects)
-[![Master Director](https://img.shields.io/badge/Director-Master%20Video%20Director-6f42c1.svg?style=flat-square)](skills/video-director)
 
-[**Quick Start**](#-quick-start) • [**The 3 Golden Rules**](#-the-3-mandatory-golden-rules) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**51 Video Effects**](#-51-viral-video-effects-face-tracking--behind-the-head) • [**Video Director**](#-video-director-master-autonomous-film--motion-director) • [**Trend Benchmarking**](#-trend-benchmarking-deconstruct-viral-reels--shorts) • [**VoiceStudio**](#-local-ai-voice-cloning--dubbing-voicestudio)
+[**Quick Start**](#-quick-start) • [**The 4 Directives**](#-the-4-mandatory-golden-directives) • [**Master Video Director**](#-video-director-master-autonomous-film--motion-director) • [**Trend Benchmarker**](#-trend-benchmarking-deconstruct-viral-reels--shorts) • [**51 Video Effects**](#-51-viral-video-effects-face-tracking--behind-the-head) • [**66 Film Styles**](#-style-atlas--66-film-styles-catalog) • [**Interactive Storyboard**](#-interactive-visual-storyboard-engine)
 
 </div>
 
@@ -25,19 +25,34 @@
 
 ## 🌟 What is AI Video Studio?
 
-AI Video Studio is a production-grade framework that turns AI coding agents (Claude, Gemini, Antigravity, Cursor, Windsurf) into **Senior Motion Graphics Directors & Video Editors**.
+**AI Video Studio** is a production-grade framework that transforms AI coding agents (Claude, Gemini, Antigravity, Cursor, Windsurf) into **Senior Motion Graphics Directors & Video Editors**.
 
-Instead of hallucinating random cuts, messy timelines, or bad audio dips, AI Video Studio enforces **strict broadcast standards**, **disciplined folder architecture**, and a **mandatory pre-production review gate** so creators review and approve visual storyboards and design stylesheets *before* a single frame is rendered.
+Instead of hallucinating random cuts, sloppy timelines, or unpolished audio dips, AI Video Studio enforces **strict broadcast standards**, **disciplined folder architecture**, and a **mandatory pre-production review gate** so creators review and approve visual storyboards and design stylesheets *before* a single frame is rendered.
+
+```mermaid
+flowchart LR
+    A["💡 Prompt or Reference Reel"] --> B["📈 Trend Benchmarker (yt-dlp + FFmpeg)"]
+    B --> C["🎬 Video Director (Story + Style Specs)"]
+    C --> D["📋 Pre-Production Review Gate (Storyboard & Stylesheet)"]
+    D -->|User Signs Off| E["⚙️ Production Engine"]
+    subgraph E ["⚙️ Production Engine"]
+        E1["Remotion & Anime.js"]
+        E2["51 Viral Video Effects"]
+        E3["VoiceStudio & Earshot"]
+    end
+    E --> F["🔍 Automated QA Check"]
+    F --> G["🚀 Final Broadcast Master (export/)"]
+```
 
 ---
 
-## 🛡️ The 3 Mandatory Golden Rules
+## 🛡️ The 4 Mandatory Golden Directives
 
-Every video project managed by AI Video Studio strictly adheres to three non-negotiable directives:
+Every video project managed by AI Video Studio strictly adheres to four non-negotiable rules:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                        AI VIDEO STUDIO WORKFLOW                        │
+│                        AI VIDEO STUDIO DIRECTIVES                      │
 ├────────────────────┬───────────────────────────────────────────────────┤
 │ 1. 3-Folder Setup  │ raw_footage/   reference/   export/               │
 │ 2. Review Gate     │ stylesheet.md  storyboard.md  (Sign-Off Required) │
@@ -47,19 +62,23 @@ Every video project managed by AI Video Studio strictly adheres to three non-neg
 ```
 
 1. **Mandatory 3-Folder Architecture**:
-   - `raw_footage/`: Clean microphone WAVs, raw camera takes (`.MOV`/`.MP4`), original screencasts.
+   - `raw_footage/`: Original unedited camera recordings, A-roll takes, clean microphone audio.
    - `reference/`: Benchmark reels, competitor videos, downloaded YouTube/TikTok clips (via `yt-dlp`).
-   - `export/`: Interactive HTML storyboard decks, revision cuts, rendered final masters.
+   - `export/`: Final rendered video masters, revisions, and interactive storyboard decks.
 2. **Pre-Production Review Gate (Storyboard & Stylesheet First)**:
-   - **NEVER** render a video without first presenting the user with:
-     - `stylesheet.md`: Colors, typography, safe margins, and easing curves.
+   - **NEVER** render a single video frame without first presenting the user with:
+     - `stylesheet.md`: Colors, typography, safe margins, and motion easing curves.
      - `storyboard.md`: Scene-by-scene card breakdown with timestamps, shot types, text overlays, and audio cues.
-     - `storyboard_interactive.html`: A clickable, interactive visual deck.
+     - Interactive storyboard deck: `python tools/generate_interactive_storyboard.py export/storyboard.html`.
    - Requires explicit human approval before video code or rendering commences.
 3. **Natural Camera Clarity (Strictly 0% Synthetic Blur)**:
    - Real camera footage is rendered with 100% natural optical sharpness.
    - No synthetic oval background blur, AI matting blur, or halo cutouts.
    - Broadcast studio tone mapping applied via Mobius curve (`tonemap=mobius:param=0.3:npl=1000`).
+4. **Broadcast Dialogue Loudness Normalization**:
+   - Multi-take dialogue is normalized using FFmpeg dynamic audio normalizer:
+     `dynaudnorm=f=150:g=15:p=0.95:m=10.0`
+   - Keeps voice volume constant across all takes and scenes at broadcast speech levels (-16 to -14 LUFS).
 
 ---
 
@@ -84,19 +103,100 @@ chmod +x setup.sh
 
 ---
 
-## 🖥️ Interactive Visual Storyboard Engine
+## 🎬 Video Director: Master Autonomous Film & Motion Director
 
-AI Video Studio includes an interactive browser-based visual storyboard generator:
+The **`video-director`** skill ([`skills/video-director/`](skills/video-director)) elevates AI agents into multidisciplinary directors by synchronizing 5 professional disciplines:
 
-```bash
-python tools/generate_interactive_storyboard.py [output_path.html]
+```
+┌──────────────────────────┬─────────────────────────────────────────────────────────────┐
+│ Professional Discipline  │ Core Capabilities & Responsibilities                        │
+├──────────────────────────┼─────────────────────────────────────────────────────────────┤
+│ 1. Executive Storyteller │ 3-sec pattern interrupts, retention pacing (novelty < 2.5s) │
+│ 2. Senior Video Editor   │ Cut on action, eye-trace matching, J/L cuts, -14 LUFS audio │
+│ 3. Motion Designer       │ Anime.js physics springs, staggered kinetic typography, SVG │
+│ 4. VFX Specialist        │ 51 viral effects, face tracking, behind-the-head text drops │
+│ 5. Master Sound Designer │ Earshot AI audio critique, procedural SFX, dynamic ducking │
+└──────────────────────────┴─────────────────────────────────────────────────────────────┘
 ```
 
-### Features:
-* **Interactive Timeline Scrubber**: Clickable scene segments with duration percentages and frame counts.
-* **Simulated Viewport Canvas**: Visual mockups with simulated terminal windows, blinking cursors, and telemetry HUD overlays.
-* **Synchronized Captions**: Word-level kinetic subtitle previews with active keyword highlights.
-* **Visual Color Swatches**: One-click hex copying for design tokens.
+### 🧠 Content-to-Tool Decision Matrix
+
+| Content Archetype | Visual Style & Motion Engine | 51 Video Effects (VFX) | Sound Design & Audio Stack |
+| :--- | :--- | :--- | :--- |
+| **Talking-Head / Founder Reel** | Natural A-roll (0% blur) + Remotion kinetic captions | `backdrop-word`, `locked-on`, `orbit`, `spotlight` | `dynaudnorm` (-14 LUFS) + Earshot UI pops & clicks |
+| **DevTool & CLI Explainer** | Lemo-Opuscar `dark-keynote` + Anime.js SVG terminal draw | `glass-widgets`, `apple-toggles`, `shortcut-rain` | Mechanical keyboard SFX + subtle low drone bed |
+| **Deep-Dive & Vox Documentary**| Lemo-Opuscar `swiss-motion` / `blueprint` + highlighters | `spotlight`, `huge-strike`, `broll-split` | Orchestral tension beds (ducked -18dB) + paper SFX |
+| **Growth & Metrics Showcase** | High-contrast dark cards + GSAP animated tickers | `liquid-glass-graph`, `phone-fan`, `select-resize` | Rapid counter ticks + impact boom at milestone |
+| **Creative Promo / Music Video**| Prompt-Motion (236 prompts) + Anime.js physics springs | `dot-reveal`, `rabbit-hole`, `carousel-spin` | Earshot forge synths + cuts locked to beat transients |
+
+---
+
+## 📈 Trend Benchmarking: Deconstruct Viral Reels & Shorts
+
+Reverse-engineer the pacing, visual DNA, and editing mechanics of any viral Instagram Reel, YouTube Short, or TikTok with the studio's automated benchmarker:
+
+```bash
+# 1. Deconstruct any public URL
+python tools/trend_benchmarker.py "https://www.youtube.com/shorts/EXAMPLE_ID" --out-dir reference/trending/viral_style
+
+# 2. Or analyze a local video file
+python tools/trend_benchmarker.py reference/competitor_reel.mp4 --out-dir reference/trending/viral_style
+```
+
+### What It Deconstructs:
+* **Average Shot Length (ASL)**: Precise cut velocity and scene frequency.
+* **Hook Cut Velocity**: Exact number and timestamps of cuts within the first 3.0 seconds.
+* **Dominant Color Palette**: Top 5 HEX color swatches extracted from sampled keyframes.
+* **EBU R128 Audio Metrics**: Integrated LUFS, Loudness Range (LRA), and True Peak.
+* **Actionable Production Recipes**: Generates `style_benchmark.json` and a human-readable `benchmark_report.md` that feed directly into your project's `stylesheet.md` and `storyboard.md`.
+
+---
+
+## 🎭 51 Viral Video Effects (Face-Tracking & Behind-the-Head)
+
+Integrated directly from [**claude-video-effects**](https://github.com/Vibha-Ramprakash/claude-video-effects) by Vibha Ramprakash, AI Video Studio includes 51 viral talking-head effects optimized for 9:16 vertical reels and shorts:
+
+* **Face Tracking & Head Cutouts**: Uses local OpenCV YuNet face detection and MediaPipe Selfie Segmentation.
+* **Behind-the-Head Layering**: Elements (kinetic text, cards, widgets, graphs, sticker piles) sit *behind* the speaker’s head without obscuring their face.
+
+### Quick Usage:
+
+```bash
+# Run a single effect on a clip
+python skills/video-effects/scripts/fx.py orbit raw_footage/clip.mp4 export/out.mp4 --start 3 --end 6 --text "AI VIDEO"
+
+# Check draft frames instantly before full render (generates quick PNG inspection)
+python skills/video-effects/scripts/fx.py --plan plan.json raw_footage/clip.mp4 export/check.png --still 4.5
+
+# Full plan-based multi-effect render with original audio preserved
+python skills/video-effects/scripts/fx.py --plan plan.json raw_footage/clip.mp4 export/final.mp4
+```
+
+### The 51 Built-in Effects Catalog:
+
+| Effect Name | Visual Description & Behavior | Ideal Use Case |
+| :--- | :--- | :--- |
+| `backdrop-word` | A massive bold or serif keyword drops into the wall behind the speaker | Core concept / hook word emphasis |
+| `locked-on` | Corner brackets lock onto speaker's face with dynamic camera tracking | High-energy moments, punchlines |
+| `orbit` | Reference screenshots/reels circle 3D around speaker's head | Portfolio, customer reviews, UI showcase |
+| `spotlight` | Kills ambient lights, illuminates speaker with glowing background text | Dramatic tension, problem statements |
+| `liquid-glass-graph` | Translucent blurred glass card under chin with animated climbing graph | Revenue growth, metrics, statistics |
+| `apple-toggles` | iOS settings card under chin with toggles flipping on sequentially | Feature lists, product configuration |
+| `checklist` | Animated task list under chin: each item spins, then ticks green | Step-by-step guides, action plans |
+| `phone-fan` | Mobile screens fan out like a hand of cards under a headline | Multi-screen apps, reel collections |
+| `comment-box` | Instagram comment sheet types user text, receives hearts & replies | Social proof, community Q&A |
+| `glass-widgets` | Floating frosted glass widgets & Claude pill orbiting speaker | SaaS walkthroughs, AI agent demos |
+| `shortcut-rain` | Monospace keyboard keycaps raining down behind speaker's head | Productivity tips, developer shortcuts |
+| `huge-strike` | Giant serif word fills background, then a bold red line strikes it out | Myth busting, what NOT to do |
+| `crayon-write` | Red hand-drawn crayon text writes itself behind speaker & underlines | Casual emphasis, raw authentic edits |
+| `pause-point` | Frame freezes with a hand-drawn marker arrow pointing at a detail | Critical callout, visual proof |
+| `broll-split` | Split screen: B-roll on top with price tag sticker, speaker on bottom | Comparisons, product reviews |
+| `dot-reveal` | Shot builds itself out of glowing particles, then snaps together | High-tech intro, teaser reveal |
+| `rabbit-hole` | Frame tunnels recursively into itself with smooth 3D spin | Mind-bending transitions, deep dives |
+| `carousel-spin` | Reels spin in a 3D cylindrical carousel, slowing to a stop | Catalogue browsing, feature tour |
+| `the-bill` | Prints instructions like a receipt ticket into the wall behind speaker | Pricing breakdowns, invoice explainers |
+| `tap` | Floating "Follow" button pops up and flips smoothly to "Following" | Call to action (CTA) at reel climax |
+| *+ 31 more effects* | *`noise`, `lineup`, `lean-in`, `moody`, `swipe`, `todo`, `uninstall`, `reel-frame`, `reject-stamp`, `countdown-flip`, `cover-star`, `scribble`, `red-collage`, `split-headline`, `pastel-word`, `check-pills`, `headline-box`, `profile-wall`, `tier-list`, `headline-wall`, `timeline`, `match-cut`, `led-sign`, `slow-push`, `over-the-shoulder-zoom`, `messages`, `place-in-grid`, `tape-label`, `select-resize`, `wave-trim`, `fan-build`.* |
 
 ---
 
@@ -128,36 +228,6 @@ AI Video Studio integrates [**Anime.js**](https://animejs.com/) (`juliangarnier/
 * **Physics & Springs**: Natural physical bounce curves using `easing: 'spring(1, 90, 14, 0)'`.
 * **Beating Heartbeat & Pulsing Loops**: Seamless rhythmic timelines mapped to musical beats.
 * **Recipes & Presets**: See [`skills/motion-graphics/references/animejs-recipes.md`](skills/motion-graphics/references/animejs-recipes.md) and [`templates/animejs_motion_preset.js`](templates/animejs_motion_preset.js).
-
----
-
-## 🎭 51 Viral Video Effects (Face-Tracking & Behind-the-Head)
-
-Integrated directly from [**claude-video-effects**](https://github.com/Vibha-Ramprakash/claude-video-effects) by Vibha Ramprakash, AI Video Studio includes 51 viral talking-head effects optimized for 9:16 vertical reels and shorts:
-
-* **Face Tracking & Head Cutouts**: Uses local OpenCV YuNet face detection and MediaPipe Selfie Segmentation.
-* **Behind-the-Head Layering**: Elements (kinetic text, cards, widgets, graphs, sticker piles) sit *behind* the speaker’s head without obscuring their face.
-* **51 Built-in Effects**:
-  - `orbit`: Screenshots or reels circle the speaker's head in 3D (in front at the bottom, behind at the top).
-  - `locked-on`: Corner brackets lock onto the speaker's face with smooth dynamic camera tracking.
-  - `backdrop-word`: Giant kinetic typographic words drop behind the speaker.
-  - `spotlight`: Kills background ambient lighting while keeping the speaker illuminated with glowing text.
-  - `liquid-glass-graph`: Translucent blurred glass charts revealing revenue, metrics, or curves.
-  - `phone-fan` / `comment-box` / `apple-toggles`: Floating UI widgets, interactive toggles, and social comment bubbles.
-  - `huge-strike` / `crayon-write`: Kinetic handwritten annotations and strike-throughs.
-
-### Quick Usage:
-
-```bash
-# Run a single effect on a clip
-python skills/video-effects/scripts/fx.py orbit input.mp4 output.mp4 --start 3 --end 6 --text "AI VIDEO"
-
-# Check draft frames instantly before full render (generates quick PNG inspection)
-python skills/video-effects/scripts/fx.py --plan plan.json input.mp4 check.png --still 4.5
-
-# Full plan-based rendering with original audio preserved
-python skills/video-effects/scripts/fx.py --plan plan.json input.mp4 output.mp4
-```
 
 ---
 
@@ -193,39 +263,6 @@ Integrated directly with [**Earshot**](https://github.com/Leonxlnx/earshot) (`Le
 
 ---
 
-## 🎬 Video Director: Master Autonomous Film & Motion Director
-
-The **`video-director`** skill ([`skills/video-director/`](skills/video-director)) transforms coding agents into elite multidisciplinary directors by orchestrating all specialized studio tools based on the content archetype:
-
-* **Executive Storyteller**: 3-second hook engineering (pattern interrupts, visual paradoxes), retention curve pacing (novel stimulus every 1.5–2.5s), and infinite loop endings.
-* **Senior Video Editor**: Cutting on action, eye-trace matching, J/L cuts, zero-blur natural optical clarity, and broadcast speech leveling (`dynaudnorm`, constant -14 LUFS).
-* **Lead Motion Graphics Designer**: Anime.js physics springs (`spring(1, 90, 14, 0)`), staggered character typography (`delay: anime.stagger(35)`), SVG path drawing, and Remotion sequence layouts.
-* **VFX & Viral Elements Specialist**: 51 viral video effects (`skills/video-effects`), OpenCV YuNet face tracking, and MediaPipe selfie segmentation for behind-the-head text drops, dynamic corner tracking, and liquid glass charts.
-* **Master Sound Designer**: Earshot auditory critique and realness auditing, procedural SFX synthesis (`earshot sfx`), Openverse licensed music integration, and dynamic dialogue ducking (-18 dB).
-
----
-
-## 📈 Trend Benchmarking: Deconstruct Viral Reels & Shorts
-
-Reverse-engineer the pacing, visual DNA, and editing mechanics of any viral Instagram Reel, YouTube Short, or TikTok with the studio's automated benchmarker:
-
-```bash
-# Deconstruct any public URL
-python tools/trend_benchmarker.py "https://www.youtube.com/shorts/EXAMPLE_ID" --out-dir reference/trending/viral_style
-
-# Or analyze a local video file
-python tools/trend_benchmarker.py reference/competitor_reel.mp4 --out-dir reference/trending/viral_style
-```
-
-### What It Deconstructs:
-* **Average Shot Length (ASL)**: Precise cut velocity and scene frequency.
-* **Hook Cut Velocity**: Exact number and timestamps of cuts within the first 3.0 seconds.
-* **Dominant Color Palette**: Top 5 HEX color swatches extracted from sampled keyframes.
-* **EBU R128 Audio Metrics**: Integrated LUFS, Loudness Range (LRA), and True Peak.
-* **Actionable Production Recipes**: Generates `style_benchmark.json` and a human-readable `benchmark_report.md` that feed directly into your project's `stylesheet.md` and `storyboard.md`.
-
----
-
 ## 🌐 Open Commons Media Search: Openverse
 
 Integrated with [**Openverse**](https://openverse.org) ([WordPress/openverse](https://github.com/WordPress/openverse)) to search and ingest over 800M+ CC-licensed (Creative Commons / Public Domain) assets:
@@ -240,6 +277,22 @@ python tools/openverse_search.py images "vintage paper texture" --limit 5 --down
 
 * **Commercial & Modification Safe**: Automatically filters for CC0, PDM, and CC-BY compatible media.
 * **Resilient Engine**: Queries Openverse REST API with fallback to Wikimedia Commons.
+
+---
+
+## 🖥️ Interactive Visual Storyboard Engine
+
+AI Video Studio includes an interactive browser-based visual storyboard generator:
+
+```bash
+python tools/generate_interactive_storyboard.py [output_path.html]
+```
+
+### Features:
+* **Interactive Timeline Scrubber**: Clickable scene segments with duration percentages and frame counts.
+* **Simulated Viewport Canvas**: Visual mockups with simulated terminal windows, blinking cursors, and telemetry HUD overlays.
+* **Synchronized Captions**: Word-level kinetic subtitle previews with active keyword highlights.
+* **Visual Color Swatches**: One-click hex copying for design tokens.
 
 ---
 
