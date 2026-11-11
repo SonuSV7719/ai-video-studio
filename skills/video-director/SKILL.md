@@ -152,10 +152,11 @@ Before writing a storyboard, classify the content archetype and select the optim
   ├─ Execute behind-the-head VFX via `skills/video-effects/scripts/fx.py`
   └─ Render full master to export/<project_name>_master.mp4
 
-[Phase 5: Quality Assurance & Delivery]
-  ├─ Run QA audit: `python tools/qa_check.py export/<master>.mp4`
-  ├─ Generate contact sheet grid: `python tools/contact_sheet.py export/<master>.mp4`
-  └─ Deliver final report to user with screenshots and playback instructions.
+[Phase 5: Self-Verification & Auto-Fix Loop (Zero Hardcoding)]
+  ├─ Generate dynamic keyframe contact sheet grid across scene cuts
+  ├─ Autonomously audit 5 domains: safe margins, face occlusion, contrast, audio LUFS/clipping, motion freezes
+  ├─ If defect found: dynamically diagnose root cause, generate custom fix code on the fly, and re-render
+  └─ Deliver final verified report with embedded contact sheet proof to user.
 ```
 
 ---
